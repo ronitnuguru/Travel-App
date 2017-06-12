@@ -11,6 +11,7 @@ export const getWeatherForecast = (latitude, longitude) => async (dispatch) => {
     dispatch({ type: WEATHER_FORECAST_SEARCH, payload: request });
   } catch(e) {
     console.error(e);
+
   }
 }
 
