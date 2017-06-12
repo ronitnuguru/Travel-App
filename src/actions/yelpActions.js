@@ -4,7 +4,7 @@ import {
   FETCH_YELP_RESTAURANTS, FETCH_YELP_BARS, RESET_YELP_RESTAURANTS, RESET_YELP_BARS
 } from './types';
 
-const ROOT_URL = 'http://localhost:3090';
+const ROOT_URL = 'https://afternoon-beach-56588.herokuapp.com/';
 
 export const fetchYelpData = (latitude, longitude, searchTerm) => async (dispatch) => {
   const url = `https://api.yelp.com/v3/businesses/search?term=${searchTerm}&latitude=${latitude}&longitude=${longitude}`;
