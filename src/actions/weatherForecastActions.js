@@ -5,7 +5,7 @@ import { WEATHER_FORECAST_SEARCH, CURRENT_WEATHER_FORECAST, RESET_CURRENT_WEATHE
 const WEATHER_API_KEY='71031b52ee2e59b6b5a0a6c726465ef9';
 
 export const getWeatherForecast = (latitude, longitude) => async (dispatch) => {
-  const url = `https://api.openweathermap.org/data/2.5/forecast?appid=${WEATHER_API_KEY}&lat=${latitude}&lon=${longitude}`;
+  const url = `http://api.openweathermap.org/data/2.5/forecast?appid=${WEATHER_API_KEY}&lat=${latitude}&lon=${longitude}`;
   try {
     let request = await axios.get(url);
     dispatch({ type: WEATHER_FORECAST_SEARCH, payload: request });
@@ -15,7 +15,7 @@ export const getWeatherForecast = (latitude, longitude) => async (dispatch) => {
 }
 
 export const getCurrentWeatherForecast = (latitude, longitude) => async (dispatch) => {
-  const url = `https://api.openweathermap.org/data/2.5/weather?appid=${WEATHER_API_KEY}&lat=${latitude}&lon=${longitude}`;
+  const url = `http://api.openweathermap.org/data/2.5/weather?appid=${WEATHER_API_KEY}&lat=${latitude}&lon=${longitude}`;
   try {
     let request = await axios.get(url);
     dispatch({ type: CURRENT_WEATHER_FORECAST, payload: request });
@@ -25,7 +25,7 @@ export const getCurrentWeatherForecast = (latitude, longitude) => async (dispatc
 }
 
 export const searchedWeather = (location) => async (dispatch) => {
-  const url = `https://api.openweathermap.org/data/2.5/forecast?appid=${WEATHER_API_KEY}&q=${location}`;
+  const url = `http://api.openweathermap.org/data/2.5/forecast?appid=${WEATHER_API_KEY}&q=${location}`;
   try {
     const request = await axios.get(url);
     dispatch({ type: WEATHER_FORECAST_SEARCH, payload: request });
