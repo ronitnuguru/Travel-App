@@ -7,3 +7,4 @@ export * from './nytArticlesActions';
 export * from './unsplashImagesActions';
 export * from './pixabayActions';
 export * from './yelpActions';
+export * from './favoriteActions';

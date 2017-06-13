@@ -37,8 +37,3 @@ export const fetchYelpData = (latitude, longitude, searchTerm) => async (dispatc
         console.error(error);
     });
 };
-
-export const resetYelpData = () => async (dispatch) => {
-  dispatch({ type: RESET_YELP_RESTAURANTS, payload: {} });
-  dispatch({ type: RESET_YELP_BARS, payload: {} });
-}

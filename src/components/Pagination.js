@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import _ from 'lodash';
+
+import * as actions from '../actions';
 
 class Pagination extends Component {
   constructor(props) {
@@ -13,6 +16,7 @@ class Pagination extends Component {
     this.handleNumberClick = this.handleNumberClick.bind(this);
     this.handleBackClick = this.handleBackClick.bind(this);
     this.handleForwardClick = this.handleForwardClick.bind(this);
+    this.loveClick = this.loveClick.bind(this);
   }
 
   componentWillMount() {
@@ -56,33 +60,42 @@ class Pagination extends Component {
   renderPrice(price){
     switch(price.length) {
       case 1:
-        return <img src="https://png.icons8.com/money/office/30" title="Money" width="30" height="30" />;
+        return <img src="https://png.icons8.com/money/office/30" className="money" title="Money" width="30" height="30" />;
       case 2:
         return (
           <div>
-            <img src="https://png.icons8.com/money/office/30" title="Money" width="30" height="30" />
-            <img src="https://png.icons8.com/money/office/30" title="Money" width="30" height="30" />
+            <img src="https://png.icons8.com/money/office/30" className="money" title="Money" width="30" height="30" />
+            <img src="https://png.icons8.com/money/office/30" className="money" title="Money" width="30" height="30" />
           </div>
         );
       case 3:
         return(
           <div>
-            <img src="https://png.icons8.com/money/office/30" title="Money" width="30" height="30" />
-            <img src="https://png.icons8.com/money/office/30" title="Money" width="30" height="30" />
-            <img src="https://png.icons8.com/money/office/30" title="Money" width="30" height="30" />
+            <img src="https://png.icons8.com/money/office/30" className="money" title="Money" width="30" height="30" />
+            <img src="https://png.icons8.com/money/office/30" className="money" title="Money" width="30" height="30" />
+            <img src="https://png.icons8.com/money/office/30" className="money" title="Money" width="30" height="30" />
           </div>
         );
       case 4:
       return(
         <div>
-          <img src="https://png.icons8.com/money/office/30" title="Money" width="30" height="30" />
-          <img src="https://png.icons8.com/money/office/30" title="Money" width="30" height="30" />
-          <img src="https://png.icons8.com/money/office/30" title="Money" width="30" height="30" />
-          <img src="https://png.icons8.com/money/office/30" title="Money" width="30" height="30" />
+          <img src="https://png.icons8.com/money/office/30" className="money" title="Money" width="30" height="30" />
+          <img src="https://png.icons8.com/money/office/30" className="money" title="Money" width="30" height="30" />
+          <img src="https://png.icons8.com/money/office/30" className="money" title="Money" width="30" height="30" />
+          <img src="https://png.icons8.com/money/office/30" className="money" title="Money" width="30" height="30" />
         </div>
       );
       default:
         return;
+    }
+  }
+
+  loveClick(data) {
+    if(this.props.type === 'restaurants') {
+      this.props.addToRestaurantsFavoritesList(data);
+    }
+    if(this.props.type === 'bars'){
+      this.props.addToBarsFavoritesList(data);
     }
   }
 
@@ -120,6 +133,11 @@ class Pagination extends Component {
             <div style={{marginTop: 5+'px'}}>
               {this.renderPrice(singleData.price)}
             </div>
+            <div>
+              <svg onClick={() => this.loveClick(singleData)} data={singleData} className="icon is-outlined is-hoverable" viewBox="0 0 32 32">
+                <use xlinkHref="#heart-icon"></use>
+              </svg>
+            </div>
           </div>
         </li>
       );
@@ -134,7 +152,7 @@ class Pagination extends Component {
         </div>
         <br />
         <nav aria-label="Page navigation" className="center">
-          <ul className="pagination center">
+          <ul className="center">
             <button type="button" className="btn btn-secondary paginationButtons" onClick={this.handleBackClick} >
               <span aria-hidden="true">&laquo;</span>
             </button>
@@ -149,4 +167,5 @@ class Pagination extends Component {
   }
 }
 
-export default Pagination;
+
+export default connect(null, actions)(Pagination);

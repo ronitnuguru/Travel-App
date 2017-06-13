@@ -47,7 +47,7 @@ class CurrentLocation extends Component {
     } else {
       return (
         <div>
-          <h1 className="textCenter">{getCurrentPosition.address_components[0].long_name}</h1>
+          <h1 className="textCenter cityHeading">{getCurrentPosition.address_components[0].long_name}</h1>
             <GoogleMapLoader
               containerElement={<div style={{ height: '200px', width: '100%' }} /> }
               googleMapElement={

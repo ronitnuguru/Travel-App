@@ -29,7 +29,7 @@ class Restaurants extends Component {
       return (
           <div>
             <h4 className="mainSubHeading">Restaurants</h4>
-            <Pagination data={yelpRestaurants} />
+            <Pagination data={yelpRestaurants} type="restaurants" />
           </div>
       );
     }

@@ -10,6 +10,8 @@ import Home from './components/Home';
 import FeaturedCity from './components/FeaturedCity';
 import CurrentLocation from './components/CurrentLocation';
 import SearchedCity from './components/SearchedCity';
+import Header from './components/Header';
+import Favorites from './components/Favorites';
 import App from './components/app';
 import reducers from './reducers';
 
@@ -19,7 +21,9 @@ ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>
     <BrowserRouter>
       <div>
+        <Header />
         <Switch>
+          <Route path="/favorites" component={Favorites} />
           <Route path="/location/:city" component={SearchedCity} />
           <Route path="/featured-destination/:city" component={FeaturedCity} />
           <Route path="/current-location" component={CurrentLocation} />

@@ -29,7 +29,7 @@ class Bars extends Component {
       return (
           <div>
             <h4 className="mainSubHeading">Bars</h4>
-            <Pagination data={yelpBars} />
+            <Pagination data={yelpBars} type="bars" />
           </div>
       );
     }

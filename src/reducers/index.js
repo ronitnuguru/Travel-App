@@ -11,6 +11,8 @@ import unsplashImage from './unsplashImageReducer';
 import pixabayImage from './pixabayReducer';
 import yelpRestaurants  from './yelpRestaurantReducer';
 import yelpBars  from './yelpBarsReducer';
+import favoriteRestaurants from './favoriteRestaurantsReducer';
+import favoriteBars from './favoriteBarsReducer';
 
 const rootReducer = combineReducers({
   featuredDestinations,
@@ -23,7 +25,9 @@ const rootReducer = combineReducers({
   unsplashImage,
   pixabayImage,
   yelpRestaurants,
-  yelpBars
+  yelpBars,
+  favoriteRestaurants,
+  favoriteBars
 
 });
 

@@ -16,7 +16,6 @@ class FeaturedDestinations extends Component {
     this.props.resetImageSearch();
     this.props.resetAllWeatherForecast();
     this.props.resetNewsResults();
-    this.props.resetYelpData();
   }
 
   renderFeaturedDestinations(location) {
