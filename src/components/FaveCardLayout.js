@@ -95,12 +95,16 @@ class FaveCardLayout extends Component {
     );
   }
   renderData() {
-    const { data } = this.props;
+    const { data, header } = this.props;
     if(data.length !== 0) {
       return (
+        <div>
+          <h3 className="mainSubHeading">{header}</h3>
           <div className="row">
             {data.map(value => this.renderCards(value))}
           </div>
+        </div>
+
       );
     }
     else {
