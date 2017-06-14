@@ -3,7 +3,8 @@ import axios from 'axios';
 import { FETCH_NYT_ARTICLES, RESET_NYT_RESULTS } from './types';
 
 const NYT_API = 'f5fbfac2b9f3409cbfda1dfe884e2350';
-const ROOT_URL = 'http://localhost:3090';
+//const ROOT_URL = 'http://localhost:3090';
+const ROOT_URL = 'https://shielded-mountain-82081.herokuapp.com';
 
 export const getNYTArticlesByCity = (city) => async (dispatch) => {
   const url = `https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=${NYT_API}&q=${city}&fq=${city}&sort=newest`;

@@ -3,7 +3,8 @@ import axios from 'axios';
 import { WEATHER_FORECAST_SEARCH, CURRENT_WEATHER_FORECAST, RESET_CURRENT_WEATHER, RESET_WEATHER_FORECAST } from './types';
 
 const WEATHER_API_KEY='71031b52ee2e59b6b5a0a6c726465ef9';
-const ROOT_URL = 'http://localhost:3090';
+//const ROOT_URL = 'http://localhost:3090';
+const ROOT_URL = 'https://shielded-mountain-82081.herokuapp.com';
 
 export const getWeatherForecast = (latitude, longitude) => async (dispatch) => {
   const url = `http://api.openweathermap.org/data/2.5/forecast?appid=${WEATHER_API_KEY}&lat=${latitude}&lon=${longitude}`;

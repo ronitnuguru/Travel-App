@@ -3,7 +3,8 @@ import axios from 'axios';
 import { GET_CURRENT_CITY } from './types';
 
 const GOOGLE_MAPS_API_KEY = `AIzaSyAIjIAAiKNXkgx0iVxW1iesHpOtQWFw-YQ`;
-const ROOT_URL = 'http://localhost:3090';
+//const ROOT_URL = 'http://localhost:3090';
+const ROOT_URL = 'https://shielded-mountain-82081.herokuapp.com';
 
 export function getCurrentCity(latitude, longitude) {
   return function(dispatch) {
