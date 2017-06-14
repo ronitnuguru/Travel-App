@@ -1,0 +1,161 @@
+.destination-images {
+  height: 350px;
+  width: 220px;
+  margin-left: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.horizontal-scroll {
+  /* Make this scrollable when needed */
+  overflow-x: auto;
+  /* We don't want vertical scrolling */
+  overflow-y: hidden;
+  /* Make an auto-hiding scroller for the 3 people using a IE */
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  /* For WebKit implementations, provide inertia scrolling */
+  -webkit-overflow-scrolling: touch;
+  /* We don't want internal inline elements to wrap */
+  white-space: nowrap;
+}
+
+/* Remove the default scrollbar for WebKit implementations */
+.horizontal-scroll::-webkit-scrollbar {
+   display: none;
+}
+
+.horizontal-scroll div {
+  display: inline-block;
+}
+
+.horizontal-scroll div p {
+  text-align: center;
+  font-family: 'Mogra', cursive;
+  font-size: 18px;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.cityHeading{
+  font-family: 'Bungee Shade', cursive;
+}
+
+.mainSubHeading{
+  font-family: 'Patua One', cursive;
+}
+
+.cityImages {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.newsImages {
+  height: 150px;
+  width: 220px;
+  position: relative;
+}
+
+
+.overlayBadge {
+  position: absolute;
+  left: 10px;
+}
+
+.paginationButtons{
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.paginatedImages{
+  height: 150px;
+  width: 170px;
+  margin-right: 20px;
+}
+.star-ratings-css {
+  unicode-bidi: bidi-override;
+  color: #c5c5c5;
+  font-size: 25px;
+  height: 25px;
+  width: 100px;
+  position: relative;
+  padding: 0;
+  text-shadow: 0px 1px 0 #a2a2a2;
+}
+  .star-ratings-css-top {
+    color: #FFDF00;
+    padding: 0;
+    position: absolute;
+    z-index: 1;
+    display: block;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+  }
+  .star-ratings-css-bottom {
+    padding: 0;
+    display: block;
+    z-index: 0;
+  }
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+}
+
+.paginationButtons:active{
+  background-color: gray;
+}
+.paginationButtons:focus{
+  border: 2px solid blue;
+}
+
+.search-bar{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.icon.is-hoverable:hover{
+  height: 32px;
+  width: 32px;
+  fill: #FE4365;
+  cursor: pointer;
+}
+.icon{
+  width: 32px;
+  height: 32px;
+  fill: #ccc;
+}
+.icon:active{
+  height: 32px;
+  width: 32px;
+  fill: #FE4365;
+  cursor: pointer;
+}
+
+.header {
+  margin-bottom: 10px;
+}
+
+.charts{
+  height: 125px;
+}
+
+.card-size{
+  width: 240px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.faveCardImages{
+  height: 220px;
+  width: 240px;
+}
+
+.card-spacing{
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
